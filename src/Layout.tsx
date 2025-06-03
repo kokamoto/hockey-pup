@@ -15,6 +15,7 @@ export const Layout = (props: LayoutProps) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>${props.title}</title>
       <meta name="description" content="${props.description}">
+      <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
     </head>
     <body>
       ${props.children} <!-- Render children here -->

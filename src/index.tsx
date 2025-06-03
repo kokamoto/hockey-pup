@@ -21,9 +21,22 @@ app.get('/hello', (c) => {
   // Render a simple page
   return c.html(
     <Layout title="Hello Page" description="This is the hello page.">
-      <h1>Hello, World!</h1>
-      <p>This is another route in our Hono app.</p>
+      <h1>Fun Examples</h1>
+      <h2>Random Color Swatch</h2>
+      <p>Click the button to generate a random color swatch.</p>
+      <button hx-get="/example/random-color-swatch" hx-target="#color-swatch">Get Random Color Swatch</button>
+      <div id="color-swatch" style={{ marginTop: '20px' }}>
+        <div style={{ width: '100px', height: '100px', backgroundColor: 'trasparent' }}></div>
+      </div>
     </Layout>)
+})
+
+app.get('/example/random-color-swatch', (c) => {
+  // Render a random color swatch
+  const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return c.html(
+      <div style={{ width: '100px', height: '100px', backgroundColor: randomColor }}></div>
+  )
 })
 
 serve({
