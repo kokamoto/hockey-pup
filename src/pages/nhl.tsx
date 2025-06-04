@@ -1,19 +1,14 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
 import { Layout } from '../Layout.tsx'
+import { NHLAdapter } from '../utils/nhl-adapter.ts'
 
 const nhl = new Hono()
 
-nhl.get('/teams', (c) => {
+nhl.get('/teams', async (c) => {
 
-  // This route would typically fetch NHL teams from an API or database
-  const teams = [
-    { id: 1, name: 'Team A' },
-    { id: 2, name: 'Team B' },
-    { id: 3, name: 'Team C' }
-  ]
-
-  const teamsHtml = teams.map(team => (<li>{team.name}</li>))
+  const nhlTeams = await NHLAdapter.fetchNHLTeams();
+  const teamsHtml = nhlTeams.map(team => (<li>{team.fullName}</li>))
   
   return c.html(
     <Layout title="NHL Teams" description="List of NHL teams">
