@@ -1,13 +1,13 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
 import { Layout } from '../Layout.tsx'
-import { NHLAdapter } from '../utils/nhl-adapter.ts'
+import { fetchTeams } from '../utils/db-adapter.ts'
 
 const nhl = new Hono()
 
 nhl.get('/teams', async (c) => {
 
-  const nhlTeams = await NHLAdapter.fetchNHLTeams();
+  const nhlTeams = await fetchTeams();
   const teamsHtml = nhlTeams.map(team => (<li>{team.fullName}</li>))
   
   return c.html(
