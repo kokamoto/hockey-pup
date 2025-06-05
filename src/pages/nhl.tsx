@@ -8,7 +8,9 @@ const nhl = new Hono()
 nhl.get('/teams', async (c) => {
 
   const nhlTeams = await fetchTeams();
-  const teamsHtml = nhlTeams.map(team => (<li>{team.fullName}</li>))
+  const teamsHtml = nhlTeams.map(team =>
+    html`<li><a href='/nhl/teams/${team.id}'>${team.fullName}</a></li>`
+  )
   
   return c.html(
     <Layout title="NHL Teams" description="List of NHL teams">
@@ -20,6 +22,25 @@ nhl.get('/teams', async (c) => {
     </Layout>
   )
 
+})
+
+nhl.get('/teams/:id', async (c) => {
+  const teamId = c.req.param('id');
+  const nhlTeams = await fetchTeams();
+  const team = nhlTeams.find(t => t.id === parseInt(teamId));
+
+  if (!team) {
+    return c.text('Team not found', 404);
+  }
+
+  return c.html(
+    <Layout title={team.fullName} description={`Details for ${team.fullName}`}>
+      <h1>{team.fullName}</h1>
+      <p>Franchise ID: {team.franchiseId}</p>
+      <p>Tri Code: {team.triCode}</p>
+      <p><a href="/nhl/teams">Back to Teams</a></p>
+    </Layout>
+  )
 })
 
 export default nhl;
