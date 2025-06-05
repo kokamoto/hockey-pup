@@ -16,6 +16,7 @@ app.get('/', (c) => {
   return c.html(
     <Layout {...props}>
       <h1>Welcome to Puck Pup!</h1>
+      <p>Your hockey companion</p>
       <p>Visit <a href="/examples">/examples</a> to see another route.</p>
     </Layout>)
 })
