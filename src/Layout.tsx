@@ -20,7 +20,7 @@ export const Layout = (props: LayoutProps) => {
     </head>
     <body>
       <nav>
-        <a href="/">Puck Pup</a>
+        <a href="/">Hockey Pup</a>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/examples">Examples</a></li>

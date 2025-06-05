@@ -10,12 +10,12 @@ const app = new Hono();
 app.get('/', (c) => {
   // Render the main page with a layout
   const props: LayoutProps = {
-    title: 'Puck Pup',
+    title: 'Hockey Pup',
     description: 'A simple hockey app.'
   }
   return c.html(
     <Layout {...props}>
-      <h1>Welcome to Puck Pup!</h1>
+      <h1>Welcome to Hockey Pup!</h1>
       <p>Your hockey companion</p>
       <p>Visit <a href="/examples">/examples</a> to see another route.</p>
     </Layout>)

@@ -1,5 +1,5 @@
 {
-  "name": "puck-pup",
+  "name": "hockey-pup",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.tsx",
