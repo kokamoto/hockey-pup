@@ -43,4 +43,26 @@ nhl.get('/teams/:id', async (c) => {
   )
 })
 
+nhl.get('/teams/:id/roster', async (c) => {
+  const teamId = c.req.param('id');
+  const nhlTeams = await fetchTeams();
+  const team = nhlTeams.find(t => t.id === parseInt(teamId));
+
+  if (!team) {
+    return c.text('Team not found', 404);
+  }
+
+  // Here you would typically fetch the roster for the team
+  // For now, we'll just return a placeholder
+  const rosterHtml = html`<p>Roster for ${team.fullName} will be displayed here.</p>`;
+
+  return c.html(
+    <Layout title={`${team.fullName} Roster`} description={`Roster for ${team.fullName}`}>
+      <h1>{team.fullName} Roster</h1>
+      {rosterHtml}
+      <p><a href={`/nhl/teams/${team.id}`}>Back to Team Details</a></p>
+    </Layout>
+  )
+})
+
 export default nhl;
