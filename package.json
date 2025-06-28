@@ -13,8 +13,10 @@
   "devDependencies": {
     "@types/node": "^20.11.17",
     "node-fetch": "^3.3.2",
+    "node-html-parser": "^7.0.1",
     "sqlite3": "^5.1.7",
     "tsx": "^4.7.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   }
 }
