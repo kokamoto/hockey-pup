@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "test": "vitest",
-    "test:report": "vitest run --reporter verbose"
+    "test:report": "vitest run --reporter verbose",
+    "test:coverage": "vitest run --coverage --reporter verbose"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.3",

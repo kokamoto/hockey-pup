@@ -27,9 +27,8 @@ export const Layout = (props: LayoutProps) => {
           <li><a href="/nhl">NHL Page</a></li>
         </ul>
       </nav>
-      <main>
-      ${props.children} <!-- Render children here -->
-      </main>
+      <!-- Render main element here -->
+      ${props.children}
     </body>
     </html>`
 }

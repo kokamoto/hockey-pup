@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
-import { Layout } from '../templates/layouts/Layout.tsx'
+import { Layout } from '../templates/layout/Layout.tsx'
 import { fetchTeams } from '../utils/db-adapter.ts'
 
 const nhl = new Hono()

@@ -5,6 +5,11 @@ export default defineConfig({
    coverage: {
       provider: 'istanbul',
       reporter: ['text', 'html'],
+      exclude: [
+        'src/test/**',
+        'src/index.tsx',
+        'src/db/**'
+      ]
    }
   },
 });
