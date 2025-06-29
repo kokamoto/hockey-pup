@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import { Layout } from '../Layout.tsx'
+import { Layout } from '../templates/layouts/Layout.tsx'
 
 const examples = new Hono()
 examples.get('/', (c) => {
