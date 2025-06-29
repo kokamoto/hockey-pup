@@ -1,4 +1,8 @@
-```
+# Hocky Pup
+
+## Run locally
+
+```sh
 npm install
 npm run dev
 ```
