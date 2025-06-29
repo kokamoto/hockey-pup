@@ -9,7 +9,7 @@ describe("Example Page", () => {
     const response = await app.request("/examples");
     const text = await response.text();
     const html = parse(text);
-    expect(html.querySelector("title")?.text).toBe("Hocky Pup: Examples");
+    expect(html.querySelector("title")?.text).toBe("Hockey Pup: Examples");
     expect(html.querySelector("main#example-main")).not.toBeNull();
     expect(response.status).toBe(200);
   });

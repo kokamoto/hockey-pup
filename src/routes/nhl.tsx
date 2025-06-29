@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 import { html } from 'hono/html'
 import { Layout } from '../templates/layout/Layout.tsx'
 import { fetchTeams } from '../utils/db-adapter.ts'
+import { NHLMain } from '../templates/main/NHLMain.tsx'
 
 const nhl = new Hono()
 
@@ -27,11 +28,13 @@ nhl.get('/teams', async (c) => {
   
   return c.html(
     <Layout title="NHL" description="List of NHL teams">
-      <h1>NHL Teams</h1>
-      <ul>
-        {teamsHtml}
-      </ul>
-      <p>Click on a team to see more details.</p>
+      <NHLMain>
+        <h1>NHL Teams</h1>
+        <ul>
+          {teamsHtml}
+        </ul>
+        <p>Click on a team to see more details.</p>
+      </NHLMain>
     </Layout>
   )
 
