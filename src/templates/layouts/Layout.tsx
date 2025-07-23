@@ -24,7 +24,7 @@ export const Layout = (props: LayoutProps) => {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/examples">Examples</a></li>
-          <li><a href="/nhl/teams">NHL Teams</a></li>
+          <li><a href="/nhl">NHL Page</a></li>
         </ul>
       </nav>
       <main>

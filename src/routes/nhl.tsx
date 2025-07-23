@@ -5,6 +5,19 @@ import { fetchTeams } from '../utils/db-adapter.ts'
 
 const nhl = new Hono()
 
+nhl.get('/', (c) => {
+  return c.html(
+    <Layout title="NHL" description="This is the NHL page.">
+      <h1>NHL</h1>
+      <p>Welcome to the NHL section of Hockey Pup!</p>
+      <p>Here you can find information about NHL teams and players.</p>
+      <ul>
+        <li><a href="/nhl/teams">Teams</a></li>
+      </ul>
+    </Layout>
+  )
+});
+
 nhl.get('/teams', async (c) => {
 
   const nhlTeams = await fetchTeams();
@@ -13,7 +26,7 @@ nhl.get('/teams', async (c) => {
   )
   
   return c.html(
-    <Layout title="NHL Teams" description="List of NHL teams">
+    <Layout title="NHL" description="List of NHL teams">
       <h1>NHL Teams</h1>
       <ul>
         {teamsHtml}

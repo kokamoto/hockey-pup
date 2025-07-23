@@ -3,12 +3,12 @@ import { parse } from "node-html-parser";
 
 import app from "../../app.tsx";
 
-describe("Home Page", () => {
-  it("should render the Home page title", async () => {
-    const response = await app.request("/");
+describe("Examples Page", () => {
+  it("should render the Examples page title", async () => {
+    const response = await app.request("/examples");
     const text = await response.text();
     const html = parse(text);
-    expect(html.querySelector("title")?.text).toBe("Hocky Pup: Home");
+    expect(html.querySelector("title")?.text).toBe("Hocky Pup: Examples");
     expect(response.status).toBe(200);
   });
 });
