@@ -4,8 +4,8 @@ import { Layout } from '../templates/layouts/Layout.tsx'
 const examples = new Hono()
 examples.get('/', (c) => {
   return c.html(
-    <Layout title="Fun Examples" description="This is the examples page.">
-      <h1>Fun Examples</h1>
+    <Layout title="Examples" description="This is the examples page.">
+      <h1>Examples</h1>
       <section>
         <h2>Random Color Swatch</h2>
         <p>Click the button to generate a random color swatch.</p>
