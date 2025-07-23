@@ -1,5 +1,8 @@
 import sqlite3 from 'sqlite3';
-import { DATABASE_FILE_PATH, TEAM_TABLE_NAME, PLAYER_TABLE_NAME, TeamFields } from './constants.ts';
+import { Config } from '../utils/config.ts';
+import { TEAM_TABLE_NAME, PLAYER_TABLE_NAME, TeamFields } from './constants.ts';
+
+const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
 
 // Open a database (creates it if it doesn't exist)
 const db = new sqlite3.Database(DATABASE_FILE_PATH, (err) => {

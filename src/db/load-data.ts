@@ -1,6 +1,9 @@
 import sqlite3 from 'sqlite3';
-import { DATABASE_FILE_PATH, TEAM_TABLE_NAME, PLAYER_TABLE_NAME, TeamFields } from './constants.ts';
+import { Config } from '../utils/config.ts';
+import { TEAM_TABLE_NAME, PLAYER_TABLE_NAME, TeamFields } from './constants.ts';
 import fetch from 'node-fetch';
+
+const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
 
 type NHLApiTeam = {
   id: number;

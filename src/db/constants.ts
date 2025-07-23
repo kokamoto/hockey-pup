@@ -1,5 +1,3 @@
-export const DATABASE_FILE_PATH = "data/hockey-pup.sqlite";
-
 export const TEAM_TABLE_NAME = "teams";
 export const PLAYER_TABLE_NAME = "players";
 
