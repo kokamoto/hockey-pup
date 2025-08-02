@@ -1,6 +1,9 @@
 import sqlite3 from 'sqlite3';
-import { DATABASE_FILE_PATH, TEAM_TABLE_NAME, PLAYER_TABLE_NAME, TeamFields } from './constants.ts';
+import { Config } from '../utils/config.ts';
+import { SQLStatements } from './sql-statements.ts';
 import fetch from 'node-fetch';
+
+const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
 
 type NHLApiTeam = {
   id: number;
@@ -22,22 +25,8 @@ async function fetchTeams(): Promise<NHLApiTeam[]> {
 
 function insertTeams(teams: NHLApiTeam[], db: sqlite3.Database) {
   db.serialize(() => {
-    const stmt = db.prepare(`INSERT INTO ${TEAM_TABLE_NAME} (
-      ${TeamFields.ID}, 
-      ${TeamFields.TEAM_FULL_NAME}, 
-      ${TeamFields.TEAM_COMMON_NAME}, 
-      ${TeamFields.TEAM_PLACE_NAME}, 
-      ${TeamFields.TRI_CODE}, 
-      ${TeamFields.CREATED_AT}, 
-      ${TeamFields.UPDATED_AT}
-    ) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(${TeamFields.ID}) DO UPDATE SET
-      ${TeamFields.TEAM_FULL_NAME} = excluded.${TeamFields.TEAM_FULL_NAME},
-      ${TeamFields.TEAM_COMMON_NAME} = excluded.${TeamFields.TEAM_COMMON_NAME},
-      ${TeamFields.TEAM_PLACE_NAME} = excluded.${TeamFields.TEAM_PLACE_NAME},
-      ${TeamFields.TRI_CODE} = excluded.${TeamFields.TRI_CODE},
-      ${TeamFields.UPDATED_AT} = excluded.${TeamFields.UPDATED_AT}
-    `);
-    
+
+    const stmt = db.prepare(SQLStatements.INSERT_INTO_TEAM_TABLE_SQL);
     const now = Date.now();
     
     teams.forEach(team => {
