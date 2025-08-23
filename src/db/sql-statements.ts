@@ -1,4 +1,8 @@
-const TEAM_TABLE_NAME = "teams";
+import { DBConstants } from "./constants.ts";
+
+const TEAM_TABLE_NAME = DBConstants.TEAM_TABLE_NAME;
+const PLAYER_TABLE_NAME = DBConstants.PLAYER_TABLE_NAME;
+
 const TeamFields = {
   ID: "id",
   TEAM_FULL_NAME: "teamFullName",
@@ -35,7 +39,6 @@ const INSERT_INTO_TEAM_TABLE_SQL = `INSERT INTO ${TEAM_TABLE_NAME} (
   ${TeamFields.UPDATED_AT} = excluded.${TeamFields.UPDATED_AT}
 `;
 
-const PLAYER_TABLE_NAME = "players";
 const PlayerFields = {
   ID: "id",
   HEADSHOT_URL: "headshotUrl",
