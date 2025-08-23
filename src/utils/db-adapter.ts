@@ -1,8 +1,9 @@
 import sqlite3 from 'sqlite3';
-import { TEAM_TABLE_NAME } from '../db/constants.ts';
+import { DBConstants } from "../db/constants.ts";
 import { Config } from './config.ts';
 
 const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
+const TEAM_TABLE_NAME = DBConstants.TEAM_TABLE_NAME;
 
 async function fetchAll(query: string, db: sqlite3.Database): Promise<any[]> {
   return new Promise((resolve, reject) => {
