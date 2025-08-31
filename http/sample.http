@@ -1,0 +1,336 @@
+# NHL API Sample HTTP Calls
+
+# This file contains sample HTTP requests for all endpoints described in nhl-api-reference.md.
+# You can use these with the REST Client extension in VS Code.
+
+### NHL Web API (api-web.nhle.com)
+# Sample output file: ./sample-output/player-8478402-game-log-20232024-2.json
+GET https://api-web.nhle.com/v1/player/8478402/game-log/20232024/2
+
+###
+# Sample output file: ./sample-output/player-8478402-landing.json
+GET https://api-web.nhle.com/v1/player/8478402/landing
+
+###
+# Sample output file: ./sample-output/player-8478402-game-log-now.json
+GET https://api-web.nhle.com/v1/player/8478402/game-log/now
+
+###
+# Sample output file: ./sample-output/skater-stats-leaders-current-goals-limit-5.json
+GET https://api-web.nhle.com/v1/skater-stats-leaders/current?categories=goals&limit=5
+
+###
+# Sample output file: ./sample-output/skater-stats-leaders-20222023-2-assists-limit-3.json
+GET https://api-web.nhle.com/v1/skater-stats-leaders/20222023/2?categories=assists&limit=3
+
+###
+# Sample output file: ./sample-output/goalie-stats-leaders-current-wins-limit-5.json
+GET https://api-web.nhle.com/v1/goalie-stats-leaders/current?categories=wins&limit=5
+
+###
+# Sample output file: ./sample-output/goalie-stats-leaders-20232024-2-wins-limit-3.json
+GET https://api-web.nhle.com/v1/goalie-stats-leaders/20232024/2?categories=wins&limit=3
+
+###
+# Sample output file: ./sample-output/player-spotlight.json
+GET https://api-web.nhle.com/v1/player-spotlight
+
+###
+# Sample output file: ./sample-output/standings-now.json
+GET https://api-web.nhle.com/v1/standings/now
+
+###
+# Sample output file: ./sample-output/standings-2023-11-10.json
+GET https://api-web.nhle.com/v1/standings/2023-11-10
+
+###
+# Sample output file: ./sample-output/standings-season.json
+GET https://api-web.nhle.com/v1/standings-season
+
+###
+# Sample output file: ./sample-output/club-stats-TOR-now.json
+GET https://api-web.nhle.com/v1/club-stats/TOR/now
+
+###
+# Sample output file: ./sample-output/club-stats-season-TOR.json
+GET https://api-web.nhle.com/v1/club-stats-season/TOR
+
+###
+# Sample output file: ./sample-output/club-stats-TOR-20232024-2.json
+GET https://api-web.nhle.com/v1/club-stats/TOR/20232024/2
+
+###
+# Sample output file: ./sample-output/scoreboard-TOR-now.json
+GET https://api-web.nhle.com/v1/scoreboard/TOR/now
+
+###
+# Sample output file: ./sample-output/roster-TOR-current.json
+GET https://api-web.nhle.com/v1/roster/TOR/current
+
+###
+# Sample output file: ./sample-output/roster-TOR-20232024.json
+GET https://api-web.nhle.com/v1/roster/TOR/20232024
+
+###
+# Sample output file: ./sample-output/roster-season-TOR.json
+GET https://api-web.nhle.com/v1/roster-season/TOR
+
+###
+# Sample output file: ./sample-output/prospects-TOR.json
+GET https://api-web.nhle.com/v1/prospects/TOR
+
+###
+# Sample output file: ./sample-output/club-schedule-season-TOR-now.json
+GET https://api-web.nhle.com/v1/club-schedule-season/TOR/now
+
+###
+# Sample output file: ./sample-output/club-schedule-season-TOR-20232024.json
+GET https://api-web.nhle.com/v1/club-schedule-season/TOR/20232024
+
+###
+# Sample output file: ./sample-output/club-schedule-TOR-month-now.json
+GET https://api-web.nhle.com/v1/club-schedule/TOR/month/now
+
+###
+# Sample output file: ./sample-output/club-schedule-TOR-month-2023-11.json
+GET https://api-web.nhle.com/v1/club-schedule/TOR/month/2023-11
+
+###
+# Sample output file: ./sample-output/club-schedule-TOR-week-2023-11-10.json
+GET https://api-web.nhle.com/v1/club-schedule/TOR/week/2023-11-10
+
+###
+# Sample output file: ./sample-output/club-schedule-TOR-week-now.json
+GET https://api-web.nhle.com/v1/club-schedule/TOR/week/now
+
+###
+# Sample output file: ./sample-output/schedule-now.json
+GET https://api-web.nhle.com/v1/schedule/now
+
+###
+# Sample output file: ./sample-output/schedule-2023-11-10.json
+GET https://api-web.nhle.com/v1/schedule/2023-11-10
+
+###
+# Sample output file: ./sample-output/schedule-calendar-now.json
+GET https://api-web.nhle.com/v1/schedule-calendar/now
+
+###
+# Sample output file: ./sample-output/schedule-calendar-2023-11-10.json
+GET https://api-web.nhle.com/v1/schedule-calendar/2023-11-10
+
+###
+# Sample output file: ./sample-output/score-now.json
+GET https://api-web.nhle.com/v1/score/now
+
+###
+# Sample output file: ./sample-output/score-2023-11-10.json
+GET https://api-web.nhle.com/v1/score/2023-11-10
+
+###
+# Sample output file: ./sample-output/scoreboard-now.json
+GET https://api-web.nhle.com/v1/scoreboard/now
+
+###
+# Sample output file: ./sample-output/where-to-watch.json
+GET https://api-web.nhle.com/v1/where-to-watch
+
+###
+# Sample output file: ./sample-output/gamecenter-2023020204-play-by-play.json
+GET https://api-web.nhle.com/v1/gamecenter/2023020204/play-by-play
+
+###
+# Sample output file: ./sample-output/gamecenter-2023020204-landing.json
+GET https://api-web.nhle.com/v1/gamecenter/2023020204/landing
+
+###
+# Sample output file: ./sample-output/gamecenter-2023020204-boxscore.json
+GET https://api-web.nhle.com/v1/gamecenter/2023020204/boxscore
+
+###
+# Sample output file: ./sample-output/wsc-game-story-2023020204.json
+GET https://api-web.nhle.com/v1/wsc/game-story/2023020204
+
+###
+# Sample output file: ./sample-output/network-tv-schedule-2023-11-10.json
+GET https://api-web.nhle.com/v1/network/tv-schedule/2023-11-10
+
+###
+# Sample output file: ./sample-output/network-tv-schedule-now.json
+GET https://api-web.nhle.com/v1/network/tv-schedule/now
+
+###
+# Sample output file: ./sample-output/partner-game-US-now.json
+GET https://api-web.nhle.com/v1/partner-game/US/now
+
+###
+# Sample output file: ./sample-output/playoff-series-carousel-20232024.json
+GET https://api-web.nhle.com/v1/playoff-series/carousel/20232024/
+
+###
+# Sample output file: ./sample-output/schedule-playoff-series-20232024-a.json
+GET https://api-web.nhle.com/v1/schedule/playoff-series/20232024/a
+
+###
+# Sample output file: ./sample-output/playoff-bracket-2022.json
+GET https://api-web.nhle.com/v1/playoff-bracket/2022
+
+###
+# Sample output file: ./sample-output/season.json
+GET https://api-web.nhle.com/v1/season
+
+###
+# Sample output file: ./sample-output/draft-rankings-now.json
+GET https://api-web.nhle.com/v1/draft/rankings/now
+
+###
+# Sample output file: ./sample-output/draft-rankings-2023-1.json
+GET https://api-web.nhle.com/v1/draft/rankings/2023/1
+
+###
+# Sample output file: ./sample-output/draft-tracker-picks-now.json
+GET https://api-web.nhle.com/v1/draft-tracker/picks/now
+
+###
+# Sample output file: ./sample-output/draft-picks-now.json
+GET https://api-web.nhle.com/v1/draft/picks/now
+
+###
+# Sample output file: ./sample-output/draft-picks-2023-all.json
+GET https://api-web.nhle.com/v1/draft/picks/2023/all
+
+###
+# Sample output file: ./sample-output/meta-players-8478402-teams-EDM-TOR.json
+GET https://api-web.nhle.com/v1/meta?players=8478402&teams=EDM,TOR
+
+###
+# Sample output file: ./sample-output/meta-game-2023020204.json
+GET https://api-web.nhle.com/v1/meta/game/2023020204
+
+###
+# Sample output file: ./sample-output/location.json
+GET https://api-web.nhle.com/v1/location
+
+###
+# Sample output file: ./sample-output/meta-playoff-series-2023-a.json
+GET https://api-web.nhle.com/v1/meta/playoff-series/2023/a
+
+###
+# Sample output file: ./sample-output/postal-lookup-90210.json
+GET https://api-web.nhle.com/v1/postal-lookup/90210
+
+###
+# Sample output file: ./sample-output/ppt-replay-goal-2023020204-12.json
+GET https://api-web.nhle.com/v1/ppt-replay/goal/2023020204/12
+
+###
+# Sample output file: ./sample-output/ppt-replay-2023020204-12.json
+GET https://api-web.nhle.com/v1/ppt-replay/2023020204/12
+
+###
+# Sample output file: ./sample-output/gamecenter-2023020204-right-rail.json
+GET https://api-web.nhle.com/v1/gamecenter/2023020204/right-rail
+
+###
+# Sample output file: ./sample-output/wsc-play-by-play-2023020204.json
+GET https://api-web.nhle.com/v1/wsc/play-by-play/2023020204
+
+###
+# Sample output file: ./sample-output/model-v1-openapi.json
+GET https://api-web.nhle.com/model/v1/openapi.json
+
+###
+### NHL Stats API (api.nhle.com/stats/rest)
+
+###
+# Sample output file: ./sample-output/stats-rest-en-players.json
+GET https://api.nhle.com/stats/rest/en/players
+
+###
+# Sample output file: ./sample-output/stats-rest-en-leaders-skaters-points.json
+GET https://api.nhle.com/stats/rest/en/leaders/skaters/points
+
+###
+# Sample output file: ./sample-output/stats-rest-en-milestones-skaters.json
+GET https://api.nhle.com/stats/rest/en/milestones/skaters
+
+###
+# Sample output file: ./sample-output/stats-rest-en-skater.json
+GET https://api.nhle.com/stats/rest/en/skater
+
+###
+# Sample output file: ./sample-output/stats-rest-en-skater-summary-limit-72-start-17-sort-points-cayenneExp-seasonId-20232024.json
+GET https://api.nhle.com/stats/rest/en/skater/summary?limit=72&start=17&sort=points&cayenneExp=seasonId=20232024
+
+###
+# Sample output file: ./sample-output/stats-rest-en-leaders-goalies-gaa.json
+GET https://api.nhle.com/stats/rest/en/leaders/goalies/gaa
+
+###
+# Sample output file: ./sample-output/stats-rest-en-goalie-summary-limit-72-start-15-sort-wins-cayenneExp-seasonId-20232024.json
+GET https://api.nhle.com/stats/rest/en/goalie/summary?limit=72&start=15&sort=wins&cayenneExp=seasonId=20232024
+
+###
+# Sample output file: ./sample-output/stats-rest-en-milestones-goalies.json
+GET https://api.nhle.com/stats/rest/en/milestones/goalies
+
+###
+# Sample output file: ./sample-output/stats-rest-en-draft.json
+GET https://api.nhle.com/stats/rest/en/draft
+
+###
+# Sample output file: ./sample-output/stats-rest-en-team.json
+GET https://api.nhle.com/stats/rest/en/team
+
+###
+# Sample output file: ./sample-output/stats-rest-en-team-id-10.json
+GET https://api.nhle.com/stats/rest/en/team/id/10
+
+###
+# Sample output file: ./sample-output/stats-rest-en-team-summary-sort-shotsForPerGame-cayenneExp-seasonId-20232024-and-gameTypeId-2.json
+GET https://api.nhle.com/stats/rest/en/team/summary?sort=shotsForPerGame&cayenneExp=seasonId=20232024%20and%20gameTypeId=2
+
+###
+# Sample output file: ./sample-output/stats-rest-en-franchise.json
+GET https://api.nhle.com/stats/rest/en/franchise
+
+###
+# Sample output file: ./sample-output/stats-rest-en-componentSeason.json
+GET https://api.nhle.com/stats/rest/en/componentSeason
+
+###
+# Sample output file: ./sample-output/stats-rest-en-season.json
+GET https://api.nhle.com/stats/rest/en/season
+
+###
+# Sample output file: ./sample-output/stats-rest-en-game.json
+GET https://api.nhle.com/stats/rest/en/game
+
+###
+# Sample output file: ./sample-output/stats-rest-en-game-meta.json
+GET https://api.nhle.com/stats/rest/en/game/meta
+
+###
+# Sample output file: ./sample-output/stats-rest-en-config.json
+GET https://api.nhle.com/stats/rest/en/config
+
+###
+# Sample output file: ./sample-output/stats-rest-ping.json
+GET https://api.nhle.com/stats/rest/ping
+
+###
+# Sample output file: ./sample-output/stats-rest-en-country.json
+GET https://api.nhle.com/stats/rest/en/country
+
+###
+# Sample output file: ./sample-output/stats-rest-en-shiftcharts-cayenneExp-gameId-2021020001.json
+GET https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=2021020001
+
+###
+# Sample output file: ./sample-output/stats-rest-en-glossary.json
+GET https://api.nhle.com/stats/rest/en/glossary
+
+###
+# Sample output file: ./sample-output/stats-rest-en-content-module-overview.json
+GET https://api.nhle.com/stats/rest/en/content/module/overview
+
