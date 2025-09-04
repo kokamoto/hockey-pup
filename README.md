@@ -1,4 +1,4 @@
-# Hocky Pup
+# Hockey Pup
 
 ## Run locally
 
