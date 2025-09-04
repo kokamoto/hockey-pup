@@ -25,6 +25,10 @@ export const Layout = (props: LayoutProps) => {
           <li><a href="/">Home</a></li>
           <li><a href="/examples">Examples</a></li>
           <li><a href="/nhl">NHL Page</a></li>
+          <li><a href="https://github.com/kokamoto/hockey-pup"
+            target="_blank" rel="noopener noreferrer">
+            <image src="/static/github-mark.svg" alt="GitHub: hockey-pup" width="16" height="16"/>
+            </a></li>
         </ul>
       </nav>
       <!-- Render main element here -->
