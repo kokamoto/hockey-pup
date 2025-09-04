@@ -1,33 +1,12 @@
 import { Hono } from 'hono'
-import { Layout } from '../templates/layouts/Layout.tsx'
+import { Layout } from '../templates/layout/Layout.tsx'
+import { ExamplesMain } from '../templates/main/ExamplesMain.tsx'
 
 const examples = new Hono()
 examples.get('/', (c) => {
   return c.html(
     <Layout title="Examples" description="This is the examples page.">
-      <h1>Examples</h1>
-      <section>
-        <h2>Random Color Swatch</h2>
-        <p>Click the button to generate a random color swatch.</p>
-        <button hx-get="/examples/api/random-color-swatch" hx-target="#color-swatch">Get Random Color Swatch</button>
-        <div id="color-swatch" style={{ marginTop: '20px' }}>
-          <div style={{ width: '100px', height: '100px', backgroundColor: 'trasparent' }}></div>
-        </div>
-      </section>
-      <section>
-        <h2>Random Hockey Team</h2>
-        <button hx-get="/examples/api/random-hockey-team-link" hx-target="#hockey-team-link">Get Hockey Team Link</button>
-        <div id="hockey-team-link" style={{ marginTop: '20px'}}>
-        </div>
-      </section>
-      <section>
-        <h2>Tile Example</h2>
-        <ul>
-          <li class="tile">First Tile</li>
-          <li class="tile">Second Tile</li>
-          <li class="tile">Third Tile</li>
-        </ul>
-      </section>
+      <ExamplesMain />
     </Layout>)
 })  
 
