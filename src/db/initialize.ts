@@ -1,6 +1,6 @@
 import sqlite3 from 'sqlite3';
 import { Config } from '../utils/config.ts';
-import { SQLStatements } from './sql-statements.ts';
+import fs from 'fs';
 
 const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
 
@@ -11,13 +11,16 @@ const db = new sqlite3.Database(DATABASE_FILE_PATH, (err) => {
   }
 });
 
+
 // Serialize ensures operations are performed sequentially
 db.serialize(() => {
-  // Create team table
-  db.run(SQLStatements.CREATE_TEAM_TABLE_SQL);
-
-  // Create player table
-  db.run(SQLStatements.CREATE_PLAYER_TABLE_SQL);
+  // Read SQL from file
+  const sql = fs.readFileSync(__dirname + '/create-tables.sql', 'utf8');
+  db.exec(sql, (err) => {
+    if (err) {
+      console.error('Error executing SQL from create-tables.sql:', err.message);
+    }
+  });
 });
 
 // Close the database connection
