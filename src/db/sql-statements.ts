@@ -117,7 +117,7 @@ const CountryFields = {
   UPDATED_AT: "updatedAt"
 };
 const CREATE_COUNTRY_TABLE_SQL = `CREATE TABLE IF NOT EXISTS ${COUNTRY_TABLE_NAME} (
-  ${CountryFields.ID} INTEGER PRIMARY KEY,
+  ${CountryFields.ID} TEXT PRIMARY KEY,
   ${CountryFields.NAME} TEXT,
   ${CountryFields.CODE} TEXT,
   ${CountryFields.CREATED_AT} INTEGER,

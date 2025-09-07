@@ -28,10 +28,12 @@ CREATE TABLE IF NOT EXISTS players (
 );
 
 -- Create table for countries
+
 CREATE TABLE IF NOT EXISTS countries (
-    id INTEGER PRIMARY KEY,
+    id TEXT PRIMARY KEY,
     name TEXT,
     code TEXT,
+    iocCode TEXT,
     createdAt INTEGER,
     updatedAt INTEGER
 );
