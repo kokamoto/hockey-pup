@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const DATABASE_FILE_PATH = Config.getDataBaseFilePath("test");
+const DATABASE_FILE_PATH = Config.getDataBaseFilePath();
 
 // Open a database (creates it if it doesn't exist)
 const db = new sqlite3.Database(DATABASE_FILE_PATH, (err) => {
