@@ -8,7 +8,7 @@ import nhl from './routes/nhl.tsx'
 
 const app = new Hono();
 
-app.use('/static/*', serveStatic({ root: './src/' }))
+app.use('/static/*', serveStatic({ root: './src/app/' }))
 
 app.get('/', (c) => {
   // Render the main page with a layout

@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
 import { Layout } from '../templates/layout/Layout.tsx'
-import { fetchTeams } from '../utils/db-adapter.ts'
+import { fetchTeams } from '../../utils/db-adapter.ts'
 import { NHLMain } from '../templates/main/NHLMain.tsx'
 
 const nhl = new Hono()
