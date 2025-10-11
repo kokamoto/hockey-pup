@@ -108,7 +108,7 @@ const INSERT_INTO_PLAYER_TABLE_SQL = `INSERT INTO ${PLAYER_TABLE_NAME} (
 /*
  * COUNTRY TABLE
  */
-const COUNTRY_TABLE_NAME = "countries";
+const COUNTRY_TABLE_NAME = DBConstants.COUNTRY_TABLE_NAME;
 const CountryFields = {
   ID: "id",
   NAME: "name",
@@ -134,7 +134,6 @@ const INSERT_INTO_COUNTRY_TABLE_SQL = `INSERT INTO ${COUNTRY_TABLE_NAME} (
   ${CountryFields.CODE} = excluded.${CountryFields.CODE},
   ${CountryFields.UPDATED_AT} = excluded.${CountryFields.UPDATED_AT}
 `;
-
 
 export const SQLStatements = {
   CREATE_TEAM_TABLE_SQL,

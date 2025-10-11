@@ -27,7 +27,7 @@ function insertTeams(teams: NHLApiTeam[], db: sqlite3.Database) {
   db.serialize(() => {
 
     const stmt = db.prepare(SQLStatements.INSERT_INTO_TEAM_TABLE_SQL);
-    const now = Date.now();
+    const now = Date.now() / 1000; // Current timestamp in seconds
     
     teams.forEach(team => {
       stmt.run(
