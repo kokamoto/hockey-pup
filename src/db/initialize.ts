@@ -36,11 +36,6 @@ db.serialize(() => {
     }
   });
 
-  // Create player table
-  db.run(SQLStatements.CREATE_PLAYER_TABLE_SQL);
-
-  // Create country table
-  db.run(SQLStatements.CREATE_COUNTRY_TABLE_SQL);
 });
 
 // Close the database connection
