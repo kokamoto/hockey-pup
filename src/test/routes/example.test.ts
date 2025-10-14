@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { parse } from "node-html-parser";
 
-import app from "../../app.tsx";
+import app from "../../app/app.tsx";
 
 describe("Example Page", () => {
 
